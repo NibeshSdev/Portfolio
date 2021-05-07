@@ -141,26 +141,47 @@ docker run -p 8082:8080 springboot-docker
 ``` 
 Now check the [http://localhost:8082/home](http://localhost:8082/home) in browser. Did you notice that in the log, you can see the Tomcat started at 8080 port but our application is running on 8082 port. That is, our application is actually running inside docker on 8080 port but we cannot directly access the port inside the docker. Therefore, we map the docker port to oustide port that we can get access (here, 8082). 
 
+When you try to stop the application (using Ctrl+C or else in the terminal), you see the application is still running. Because the docker/container is still running. You have to stop it using docker command. After stopping the container, you can remove the container if you want.
+
+```docker
+#list running containers
+docker ps
+
+#stop a running container
+docker stop <container-id>
+
+#delete a container
+docker rm <container-id>
+```
+
+If you want to stop and remove the container using `Ctrl+C` or similar in the terminal then you can run the docker with following tags:
+
+```docker
+docker run --rm -it -p 8082:8080 springboot-docker
+```
+- -it switch allows to stop the container using Ctrl-C from the command-line
+- -–rm switch makes sure that the container is deleted once it has stopped
+
 ### Push the image to DockerHub (registry)
 
 Step 1: Create a [DockerHub account](https://hub.docker.com/) (if you don't have one).
 
 Step 2: Tag the image with your Docker-ID as prefix `<docker-id>/<image-name>:<tag>`. `<tag>` is optional, but a good pratice.
 
-```terminal
+```docker
 docker tag springboot-docker <yourdockerid>/springboot-docker:1.0
 ```
 
 Step 3: Login to your dockerhub from command line
 
-```terminal
+```docker
 docker login
 # pass the credentials
 ```
 
 Step 4: Push your image (docker push)
 
-```terminal
+```docker
 docker push <yourdockerid>/springboot-docker:1.0 
 ```
 
