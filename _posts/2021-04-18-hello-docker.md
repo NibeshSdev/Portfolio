@@ -21,7 +21,7 @@ Containers are created from images. Images are the blueprint or the template for
 ### Registry
 Registry is a store for images. You can push/pull images from the registry and can use the same image to run many containers as you want.
 
-![Docker flowchart](/assets/images/posts/docker-flowchart.png "Docker flowchart")
+![Docker flowchart](/assets/images/posts/04-2021/docker-flowchart.png "Docker flowchart")
 
 ### Run a simple Java application in a container
 
@@ -80,7 +80,7 @@ This application will output "Testing Java with Docker" in console and stops.
 
 Step 1: Create a spring boot application using [spring.io](https://start.spring.io/)
 
-![SpringBoot Project Init](/assets/images/posts/springboot-docker-project-init.PNG "SpringBoot Project Init")
+![SpringBoot Project Init](/assets/images/posts/04-2021/springboot-docker-project-init.PNG "SpringBoot Project Init")
 
 Step 2: Create a REST endpoint
 
