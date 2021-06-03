@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker in 6 minutes!
+title: Docker in Spring Boot
 subheading: Docker
 author: Nibesh
 categories: Docker

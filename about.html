@@ -1,11 +1,11 @@
 ---
 layout: about
-title: About
+title: About Me
 ---
 
-<h2>About</h2>
+<h2>About Me</h2>
 
-<p>Hi, I am Nibesh Shankhadev. I am a Software Engineer who loves to build great products that solves human problems. 
+<p>Hi, I am Nibesh Shankhadev. I am a Software Engineer with <span id="expYear"></span>+ years of experience. I loves to build great products that solves human problems. 
 Currently, I am living in Sydney, Australia.</p>
 
 <p>A pragmatic software engineer who believes the goal and needs of the business is more important than the choice of 
@@ -49,7 +49,10 @@ adopted by top 3 'A' class banks (Kumari, Laxmi and Nabil bank) in Nepal.
 
 <h2 id="education">Education</h2>
 <b>Master of Information Technology</b>
-<p><b>Charles Sturt University • Sydney, NSW • 2021</b></p>
+<p>Charles Sturt University • Sydney, NSW • 2019 - 2021</p>
+
+<b>Bachelor of Computer Science and Information Technology</b>
+<p>Tribhuwan University • Kathmandu, Nepal • 2013 - 2017</p>
 
 <h2 id="skills">Skills</h2>
 <p><b>Java, Java EE, Spring MVC, Spring Boot, MYSQL, Hibernate, TDD, JUnit, Mockito</b></p>
@@ -60,7 +63,18 @@ adopted by top 3 'A' class banks (Kumari, Laxmi and Nabil bank) in Nepal.
 
 <p>
     <a href="mailto:sdev.nibs@gmail.com" target="_blank"><img style="width:25px; length:25px; float:left; padding:5px" src="/assets/images/banners/email-logo.jpg" alt="email"></img></a>
-    <a href="https://github.com/nibeshSdev/" target="_blank"><img style="width:25px; length:25px; float:left; padding:5px" src="/assets/images/banners/github-logo.png" alt="github"></img></a>
-    <a href="https://www.linkedin.com/in/%E2%9A%A1nibesh-shankhadev-854227127/" target="_blank"><img style="width:25px;length:25px; float:left; padding:5px" src="/assets/images/banners/linkedin-logo.png" alt="linkedin"></img></a>
-    <a href="https://twitter.com/NibeshSdev" target="_blank"><img style="width:25px;length:25px; float:left; padding:5px" src="/assets/images/banners/twitter-logo.jpg" alt="twitter"></img></a>
+    <a href="https://github.com/nibeshsdev/" target="_blank"><img style="width:25px; length:25px; float:left; padding:5px" src="/assets/images/banners/github-logo.png" alt="github"></img></a>
+    <a href="https://www.linkedin.com/in/nibeshsdev/" target="_blank"><img style="width:25px;length:25px; float:left; padding:5px" src="/assets/images/banners/linkedin-logo.png" alt="linkedin"></img></a>
+    <a href="https://twitter.com/nibeshsdev" target="_blank"><img style="width:25px;length:25px; float:left; padding:5px" src="/assets/images/banners/twitter-logo.jpg" alt="twitter"></img></a>
 </p>
+
+
+
+
+
+<script>
+    var month = new Date().getMonth() + 1;   
+    var expYear = new Date().getFullYear() - 2018;
+    if(month >= 7) expYear = expYear + 1;
+    document.getElementById('expYear').innerHTML  = expYear;
+</script>

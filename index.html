@@ -3,6 +3,17 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Home
-banner: "/assets/images/banners/homepage.jpeg"
+title: Blog
 ---
+
+<h1>Hey,Thanks for stopping by my Blog.<h1>
+<p>Hi, I am Nibesh. I am a Software Engineer with <span id="expYear"></span>+ years of experience. I love loves to build great products to fulfill business and customer needs. Currently, I am living in Sydney, Australia. </p>
+
+<p>Below are the latest blog posts.</p>
+
+<script>
+    var month = new Date().getMonth() + 1;   
+    var expYear = new Date().getFullYear() - 2018;
+    if(month >= 7) expYear = expYear + 1;
+    document.getElementById('expYear').innerHTML  = expYear;
+</script>
